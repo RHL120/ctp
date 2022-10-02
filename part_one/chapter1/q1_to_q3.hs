@@ -7,5 +7,10 @@ myId x = x
 myCompose :: (a -> b) -> (b -> c) -> (a -> c)
 myCompose f g = \x -> g (f x)
 
+addOne :: Int -> Int
+addOne = (1 +)
+
 main :: IO ()
-main = putStr "hello"
+main = do
+  print (addOne 12)
+  print (myCompose myId addOne 12)
