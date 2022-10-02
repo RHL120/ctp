@@ -8,3 +8,7 @@ a category
 As far as I can tell, on Facebook, it is impossible for one to be friends with
 themselves so objects can never have identity morphisms thus Facebook is not a
 category
+## Question 6: When is a directed graph a category?
+A directed graph is a category if and only if every vertex has an edge conecting
+it to its'self and if for every two edges connecting the three nodes a to b and b
+to c there is a third edge connecting a to b
