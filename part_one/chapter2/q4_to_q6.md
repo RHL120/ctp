@@ -12,3 +12,5 @@ id True = True
 id False = False
 ```
 id could also be written as ```not not```
+##Question 6: Draw a category between Void, () and Bool
+See the image
