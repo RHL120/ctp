@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"time"
 )
 
@@ -26,6 +27,11 @@ func isPrime(n int) bool {
 	return true
 }
 
+func rSeed(seed int64) int {
+	rand.Seed(seed)
+	return rand.Int()
+}
+
 func main() {
 	f := memoize(isPrime)
 	a := time.Now()
@@ -34,4 +40,9 @@ func main() {
 	a = time.Now()
 	f(113)
 	fmt.Printf("Took: %v \n", time.Now().Sub(a))
+	//Question 3:
+	memRSeed := memoize(rSeed)
+	fmt.Printf("Original: %d, memoized: %d\n", rSeed(12), memRSeed(12))
+	fmt.Printf("Original: %d, memoized: %d\n", rSeed(12), memRSeed(12))
+
 }
