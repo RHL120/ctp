@@ -4,5 +4,8 @@ module Main where
 myId :: a -> a
 myId x = x
 
+myCompose :: (a -> b) -> (b -> c) -> (a -> c)
+myCompose f g = \x -> g (f x)
+
 main :: IO ()
 main = putStr "hello"
