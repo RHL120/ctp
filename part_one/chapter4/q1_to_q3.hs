@@ -6,6 +6,7 @@ module Main where
 data Option a
   = Valid a
   | Invalid
+  deriving (Show)
 
 --identity
 ret :: a -> Option a
@@ -24,5 +25,19 @@ safeReciprocal x
   | x == 0 = Invalid
   | otherwise = Valid $ 1 / x
 
+-- Question 3:
+safeRoot :: (Floating a, Ord a) => a -> Option a
+safeRoot x
+  | x < 0 = Invalid
+  | otherwise = Valid $ sqrt x
+
+rootRecip :: (Floating a, Ord a) => a -> Option a
+rootRecip = compose safeRoot safeReciprocal
+
 main :: IO ()
-main = putStrLn "hello"
+main = do
+  print $ safeRoot (-1)
+  print $ safeReciprocal 0
+  print $ safeRoot 4
+  print $ safeReciprocal 1
+  print $ rootRecip 1
