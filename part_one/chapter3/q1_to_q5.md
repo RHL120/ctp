@@ -11,3 +11,7 @@
 |-|-|
 |A set of sets with the inclusion relation: A is included in B if every element of a is also an element of B|Partial order|
 |C++ type with the following subtyping relation: T1 is subtype of T2 if a pointer to T1 can be passed to a function that expects a pointer to T2|Partial order|
+## Question 3: Prove that Bool forms a monoid under && and ||
+* && and || take a Bool and return a Bool
+* The id of && is True and the id of || is False
+* && and || are associative
