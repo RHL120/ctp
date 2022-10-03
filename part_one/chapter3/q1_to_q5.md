@@ -15,3 +15,6 @@
 * && and || take a Bool and return a Bool
 * The id of && is True and the id of || is False
 * && and || are associative
+## Question 4: Represent the Bool monoid with the && operator as a category
+.--|
+^--|
