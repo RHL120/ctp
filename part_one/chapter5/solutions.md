@@ -3,3 +3,17 @@
 The book has established that the initial objects are unique up to unique isomorphism.
 the initial object is the opposite of the terminal object thus we can conclude that
 the terminal object is unique up to isomorphism
+## Question 2: What is the product of two objects in a poset
+The product category consists of:
+```
+p :: c -> a
+q :: c -> b
+m :: d -> c
+p' :: d -> a
+q' :: d -> b
+where
+ p' = p . m
+ q' = q . m
+```
+the arrows in a poset correspond to <= so the product of 2 objects of a poset
+is the greatest object less than or equal to both a and b
