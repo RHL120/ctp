@@ -6,8 +6,8 @@ The pure functions are:
 ```haskell
 not True = False
 not False = True
-idTrue = True
-idFalse = False
+idBool True = True
+idBool False = False
 constTrue _ = True
 constFalse _ = False
 ```

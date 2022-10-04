@@ -16,5 +16,12 @@
 * The id of && is True and the id of || is False
 * && and || are associative
 ## Question 4: Represent the Bool monoid with the && operator as a category
-.--|
-^--|
+The Bool monoid and the && operator are a category with the Bool as an object
+and an arrow && True going from that object to itself and an arrow && False going
+from Bool to itself
+## Question 5: Represent addition modulo 4 as a monoid category
+Have the set {1,2,3} as the object and the arrows
+* + 1 % 3
+* + 2 % 3
+* + 3 % 3 (the id)
+going from the object to itself
