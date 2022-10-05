@@ -61,4 +61,12 @@ fn m2(e: Either<i32, bool>) -> i32 {
     }
 }
 
+//Question 8:
+
+enum OneOf<A, B, C> {
+    Left(A),
+    Middle(B),
+    Right(C),
+}
+
 fn main() {}
