@@ -1,5 +1,8 @@
 module Main where
 
+import Control.Applicative (Const(Const))
+import Data.Functor.Identity
+
 --Question 1: Pair is a bifunctor
 data Pair a b =
   Pair a b
@@ -16,3 +19,14 @@ instance Bifunctor Pair where
 
 main :: IO ()
 main = return ()
+
+--Question2:
+type Maybe' a = Either (Const () a) (Identity a)
+
+primeToMaybe :: Maybe' a -> Maybe a
+primeToMaybe (Left _) = Nothing
+primeToMaybe (Right (Identity x)) = Just x
+
+maybeToPrime :: Maybe a -> Maybe' a
+maybeToPrime Nothing = Left (Const ())
+maybeToPrime (Just x) = Right (Identity x)
