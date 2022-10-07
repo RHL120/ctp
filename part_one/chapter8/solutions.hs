@@ -30,3 +30,17 @@ primeToMaybe (Right (Identity x)) = Just x
 maybeToPrime :: Maybe a -> Maybe' a
 maybeToPrime Nothing = Left (Const ())
 maybeToPrime (Just x) = Right (Identity x)
+
+--Question3:
+data PreList a b
+  = Nil
+  | Cons a b
+  deriving (Show)
+
+instance Bifunctor PreList where
+  bimap f g Nil = Nil
+  bimap f g (Cons x y) = Cons (f x) (g y)
+  first f (Cons x y) = Cons (f x) y
+  first f Nil = Nil
+  second f (Cons x y) = Cons x (f y)
+  second f Nil = Nil
