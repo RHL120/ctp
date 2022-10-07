@@ -44,3 +44,14 @@ instance Bifunctor PreList where
   first f Nil = Nil
   second f (Cons x y) = Cons x (f y)
   second f Nil = Nil
+
+--Question4:
+newtype K2 c a b =
+  K2 c
+
+newtype Fst a b =
+  Fst a
+
+newtype Snd a b =
+  Snd b
+--K2, Fst and Snd are isomorphic to Const, Id and Const respectivly
