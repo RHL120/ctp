@@ -11,5 +11,16 @@ natMaybeList (Just x) = [x]
 -- fmap f . natMaybeList (Just x) = fmap f [x] = [f x]
 -- natMaybeList . fmap f (Just x) = natMaybeList (Just (f x)) = [x]
 -- thust the 2 above are equal
+--Question2:
+type Reader = (->)
+
+natReaderList1 :: Reader () a -> [a]
+natReaderList1 _ = []
+
+natReaderList2 :: Reader () a -> [a]
+natReaderList2 r = fmap r [()]
+
+--There is an infinite number of () lists because the list type does not have a
+--specific size
 main :: IO ()
 main = return ()
