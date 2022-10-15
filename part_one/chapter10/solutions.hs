@@ -22,5 +22,12 @@ natReaderList2 r = fmap r [()]
 
 --There is an infinite number of () lists because the list type does not have a
 --specific size
+--Question3:
+natReaderMaybe1 :: Reader Bool a -> Maybe a
+natReaderMaybe1 r = r <$> Just True
+
+natReaderMaybe2 :: Reader Bool a -> Maybe a
+natReaderMaybe2 r = r <$> Just False
+
 main :: IO ()
 main = return ()
