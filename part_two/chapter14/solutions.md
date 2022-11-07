@@ -9,4 +9,5 @@ C(a, id) g = id . g = g
 ##Question 2
 Much like the list functor where it is impossible to implement, beta, it is
 impossible to implement beta for None
-
+## Question 3
+Yes
