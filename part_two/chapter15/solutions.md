@@ -19,3 +19,6 @@ a set containing id if x == a and to the empty set otherwise. For an arbitrary
 functor F from C to Set, there are as many morphisms from C(a, a) to F a as elements
 of F a. Since the empty set is the initial object of Set, each morphism from
 C(a, a) to F a is a unique natural transformation.
+
+## Question 3
+`() -> x -> [x] ≅ [()]`
