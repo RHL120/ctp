@@ -10,3 +10,9 @@ b :: ((x -> a) -> (x -> b)) -> (a -> b)
 b conv = \x -> (x id) x
 ```
 ## Question 2
+Isn't a bijection always an isomorphism??
+```haskell
+fromY f b = f (btoa b)
+fromY id b = id (btoa b)
+= bota
+```
